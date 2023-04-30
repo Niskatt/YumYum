@@ -1,4 +1,2 @@
-web: gunicorn app:app
-git add .
-git commit -m "added Procfile and requirements.txt"
-git push heroku [feature-branch]:master
+web	python manage.py runserver
+worker	celeryd --loglevel=INFO
